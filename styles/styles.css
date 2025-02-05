@@ -98,6 +98,35 @@ main {
   height: calc(80vh - 3.5em);
 }
 
+.images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  padding: 3em;
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-thumbnail {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.product-thumbnail img {
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-thumbnail img:hover {
+  opacity: .5;
+}
+
 .product-detail {
   display: flex;
   flex-direction: column;
