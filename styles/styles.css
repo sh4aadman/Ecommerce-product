@@ -49,10 +49,6 @@ aside ul {
   color: hsl(219, 9%, 45%);
 }
 
-aside ul li {
-  cursor: pointer;
-}
-
 nav ul li a, aside ul li a {
   display: flex;
   cursor: pointer;
@@ -93,4 +89,85 @@ aside img:hover {
 
 hr {
   opacity: 0.3;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  height: calc(80vh - 3.5em);
+}
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+}
+
+.product-detail h5 {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: hsl(219, 9%, 45%);
+}
+
+.product-detail p {
+  color: hsl(219, 9%, 45%);
+}
+
+.product-price {
+  display: flex;
+  flex-direction: column;
+  gap: .8em;
+}
+
+.product-price article {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  height: 3vh;
+}
+
+.product-price article h3 {
+  padding-top: 2px;
+}
+
+.product-price article p {
+  color: white;
+  background-color: hsl(220, 13%, 13%);
+  font-size: 12px;
+  padding: 1px 2px;
+  border-radius: 2px;
+}
+
+.original-price {
+  text-decoration: line-through;
+}
+
+.product-cart {
+  display: flex;
+  gap: .8em;
+}
+
+.primary-button {
+  font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  color: hsl(220, 13%, 13%);
+  padding: .5rem 3rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.primary-button i {
+  font-size: 10px;
+  color: hsl(220, 13%, 13%);
+  margin-right: .5rem;
+}
+
+.primary-button:hover {
+  background-color: hsl(26, 100%, 60%);
 }
