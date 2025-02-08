@@ -38,11 +38,30 @@
     </nav>
     <aside>
       <ul>
-        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li><a href="#" id="product-cart"><i class="fa-solid fa-cart-shopping"></i></a><span id="count-badge">0</span>
+        </li>
         <li><a href="#"><img src="./images/image-avatar.png" alt="profile-avatar"></a></li>
       </ul>
     </aside>
   </header>
+
+  <section id="cart-modal">
+    <section id="cart-content">
+      <h2>Cart</h2>
+      <hr>
+      <section class="cart-details">
+        <figure>
+          <img src="./images/image-product-1-thumbnail.jpg" alt="product-thumbnail">
+        </figure>
+        <section class="cart-product-details">
+          <p>Fall Limited Edition Sneakers</p>
+          <p>1 x $125.00</p><span>$375.00</span>
+        </section>
+        <button class="remove-button"><i class="fa-solid fa-trash-can"></i></i></button>
+      </section>
+      <button class="primary-button" id="check-out" type="submit">Checkout</button>
+    </section>
+  </section>
 
   <hr>
 
@@ -71,16 +90,20 @@
         </article>
         <p class="original-price">$250.00</p>
       </section>
-      <section class="product-cart">
-        <form class="product-count">
-          <button>-</button>
-          <input type="number" name="" id="" value="0">
-          <button>+</button>
+      <section>
+        <form class="product-cart">
+          <section class="product-count">
+            <button id="decrement-button">-</button>
+            <input type="number" name="" id="product-quantity" min="1" value="1">
+            <button id="increment-button">+</button>
+          </section>
+          <button type="submit" class="primary-button"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
         </form>
-        <button class="primary-button"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
       </section>
     </section>
   </main>
+
+  <script src="./scripts/script.js"></script>
 </body>
 
 </html>
