@@ -17,7 +17,7 @@
 
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
@@ -70,13 +70,14 @@
       <figure class="product-image">
         <img src="./images/image-product-1.jpg" alt="product-image">
       </figure>
-      <figure class="product-thumbnail">
+      <section class="product-thumbnail-main">
         <img src="./images/image-product-1-thumbnail.jpg" alt="product-thumbnail">
         <img src="./images/image-product-2-thumbnail.jpg" alt="product-thumbnail">
         <img src="./images/image-product-3-thumbnail.jpg" alt="product-thumbnail">
         <img src="./images/image-product-4-thumbnail.jpg" alt="product-thumbnail">
-      </figure>
+      </section>
     </section>
+
     <section class="product-detail">
       <h5>Sneaker Company</h5>
       <h1>Fall Limited Edition <br> Sneakers</h1>
@@ -90,6 +91,7 @@
         </article>
         <p class="original-price">$250.00</p>
       </section>
+
       <section>
         <form class="product-cart">
           <section class="product-count">
@@ -104,18 +106,18 @@
 
     <section class="light-box">
       <section class="light-box-display">
-        <button class="close-button">x</button>
-        <!-- <section class="light-box-content"> -->
-        <figure class="product-image">
+        <button class="close-button"><i class="fa-solid fa-xmark"></i></button>
+        <figure class="product-image-lightbox">
+          <button id="previous-thumbnail"><i class="fa-solid fa-angle-left"></i></button>
           <img src="./images/image-product-1.jpg" alt="product-image">
+          <button id="next-thumbnail"><i class="fa-solid fa-angle-right"></i></button>
         </figure>
-        <figure class="product-thumbnail">
+        <figure class="product-thumbnail-lightbox">
           <img src="./images/image-product-1-thumbnail.jpg" alt="product-thumbnail">
           <img src="./images/image-product-2-thumbnail.jpg" alt="product-thumbnail">
           <img src="./images/image-product-3-thumbnail.jpg" alt="product-thumbnail">
           <img src="./images/image-product-4-thumbnail.jpg" alt="product-thumbnail">
         </figure>
-        <!-- </section> -->
       </section>
     </section>
   </main>

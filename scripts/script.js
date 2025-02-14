@@ -43,9 +43,9 @@ cart.addEventListener("mouseover", () => {
     }, 10000);
 });
 
-cart.addEventListener("mouseout", () => {
-    modal.style.display = "none";
-});
+// cart.addEventListener("mouseout", () => {
+//     modal.style.display = "none";
+// });
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
