@@ -68,13 +68,13 @@
   <main>
     <section class="images">
       <figure class="product-image">
-        <img src="./images/image-product-1.jpg" alt="product-image">
+        <img id="main-image" src="./images/image-product-1.jpg" alt="product-1">
       </figure>
       <section class="product-thumbnail-main">
-        <img src="./images/image-product-1-thumbnail.jpg" alt="product-thumbnail">
-        <img src="./images/image-product-2-thumbnail.jpg" alt="product-thumbnail">
-        <img src="./images/image-product-3-thumbnail.jpg" alt="product-thumbnail">
-        <img src="./images/image-product-4-thumbnail.jpg" alt="product-thumbnail">
+        <img class="product-thumbnail-m" src="./images/image-product-1-thumbnail.jpg" alt="product-1">
+        <img class="product-thumbnail-m" src="./images/image-product-2-thumbnail.jpg" alt="product-2">
+        <img class="product-thumbnail-m" src="./images/image-product-3-thumbnail.jpg" alt="product-3">
+        <img class="product-thumbnail-m" src="./images/image-product-4-thumbnail.jpg" alt="product-4">
       </section>
     </section>
 
@@ -99,7 +99,7 @@
             <input type="number" name="" id="product-quantity" min="1" value="1">
             <button id="increment-button">+</button>
           </section>
-          <button type="submit" class="primary-button"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+          <button type="submit" id="add-to-cart-buton" class="primary-button"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
         </form>
       </section>
     </section>
@@ -109,14 +109,14 @@
         <button class="close-button"><i class="fa-solid fa-xmark"></i></button>
         <figure class="product-image-lightbox">
           <button id="previous-thumbnail"><i class="fa-solid fa-angle-left"></i></button>
-          <img src="./images/image-product-1.jpg" alt="product-image">
+          <img id="lightbox-image" src="./images/image-product-1.jpg" alt="product-1">
           <button id="next-thumbnail"><i class="fa-solid fa-angle-right"></i></button>
         </figure>
         <figure class="product-thumbnail-lightbox">
-          <img src="./images/image-product-1-thumbnail.jpg" alt="product-thumbnail">
-          <img src="./images/image-product-2-thumbnail.jpg" alt="product-thumbnail">
-          <img src="./images/image-product-3-thumbnail.jpg" alt="product-thumbnail">
-          <img src="./images/image-product-4-thumbnail.jpg" alt="product-thumbnail">
+          <img class="product-thumbnail-light" src="./images/image-product-1-thumbnail.jpg" alt="product-1">
+          <img class="product-thumbnail-light" src="./images/image-product-2-thumbnail.jpg" alt="product-2">
+          <img class="product-thumbnail-light" src="./images/image-product-3-thumbnail.jpg" alt="product-3">
+          <img class="product-thumbnail-light" src="./images/image-product-4-thumbnail.jpg" alt="product-4">
         </figure>
       </section>
     </section>

@@ -1,80 +1,83 @@
-const cart = document.querySelector("#product-cart");
+const cartBadge = document.querySelector("#product-cart");
 
-const modal = document.querySelector("#cart-modal");
+const cartModal = document.querySelector("#cart-modal");
 
-const badge = document.querySelector("#count-badge");
-let badgeInt = parseInt(badge.textContent);
+const countBadge = document.querySelector("#count-badge");
 
-const lightbox = document.querySelector(".light-box");
+const productImage = document.querySelector("#main-image");
+
+const productLightbox = document.querySelector(".light-box");
 
 const lightboxCloseBtn = document.querySelector(".close-button");
 
-const productImage = document.querySelector(".product-image");
+const lightboxImage = document.querySelector("#lightbox-image");
 
-const form = document.querySelector(".product-cart");
+const productThumbnailMain = document.querySelectorAll(".product-thumbnail-m");
 
-const count = document.querySelector("#product-quantity");
-let countInt = parseInt(count.value);
+const productThumbnailLightbox = document.querySelectorAll(
+  ".product-thumbnail-light"
+);
 
-const button = document.querySelector(".primary-button");
+const previousBtn = document.querySelector("#previous-thumbnail");
+const nextBtn = document.querySelector("#next-thumbnail");
 
-const incrementBtn = document.querySelector("#increment-button");
+const cartSubmission = document.querySelector(".product-cart");
 
-const decrementBtn = document.querySelector("#decrement-button");
+const productCount = document.querySelector("#product-quantity");
+
+const addToCartBtn = document.querySelector("#add-to-cart-button");
+
+const countIncrementBtn = document.querySelector("#increment-button");
+
+const countDecrementBtn = document.querySelector("#decrement-button");
 
 const checkoutBtn = document.querySelector("#check-out");
 
-productImage.addEventListener("click", () => {
-    lightbox.style.display = "block";
+productImage.addEventListener("click", function () {
+  productLightbox.style.display = "block";
+  lightboxImage.src = productImage.src;
+  lightboxImage.alt = productImage.alt;
 });
 
-lightboxCloseBtn.addEventListener("click", () => {
-    lightbox.style.display = "none";
+const changeMainImage = (x) => {
+  x.addEventListener("click", function () {
+    productImage.setAttribute("src", `./images/image-${x.alt}.jpg`);
+    productImage.setAttribute("alt", `${x.alt}`);
+  });
+};
+
+lightboxCloseBtn.addEventListener("click", function () {
+  productLightbox.style.display = "none";
 });
 
-cart.addEventListener("click", () => {
-    modal.style.display = "block"
+const changeLightboxImage = (x) => {
+  x.addEventListener("click", function () {
+    lightboxImage.setAttribute("src", `./images/image-${x.alt}.jpg`);
+    lightboxImage.setAttribute("alt", `${x.alt}`);
+  });
+};
+
+productThumbnailMain.forEach(changeMainImage);
+productThumbnailLightbox.forEach(changeLightboxImage);
+
+previousBtn.addEventListener("click", function () {
+  let imgNumber = lightboxImage.alt.slice(-1);
+  let imgInt = parseInt(imgNumber);
+  imgInt--;
+  if (imgInt <= 0) {
+    imgInt = 4;
+  }
+  lightboxImage.setAttribute("src", `./images/image-product-${imgInt}.jpg`);
+  lightboxImage.setAttribute("alt", `product-${imgInt}`);
 });
 
-cart.addEventListener("mouseover", () => {
-    modal.style.display = "block";
-    setTimeout(() => {
-        modal.style.display = "none";
-    }, 10000);
+nextBtn.addEventListener("click", function () {
+  let imgNumber = lightboxImage.alt.slice(-1);
+  let imgInt = parseInt(imgNumber);
+  imgInt++;
+  if (imgInt > 4) {
+    imgInt = 1;
+  }
+  lightboxImage.setAttribute("src", `./images/image-product-${imgInt}.jpg`);
+  lightboxImage.setAttribute("alt", `product-${imgInt}`);
 });
-
-// cart.addEventListener("mouseout", () => {
-//     modal.style.display = "none";
-// });
-
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    console.log("submitted!");
-    console.log(count.value);
-    badgeInt++;
-    badge.textContent = badgeInt;
-    if (badgeInt > 0) {
-        badge.style.display = "block";
-    }
-});
-
-incrementBtn.addEventListener("click", (event) => {
-    event.preventDefault();
-    countInt++;
-    count.value = countInt;
-    decrementBtn.disabled = false;
-});
-
-decrementBtn.addEventListener("click", (event) => {
-    event.preventDefault();
-    countInt--;
-    if (countInt <= 0) {
-        countInt = 0;
-        decrementBtn.disabled = true;
-    }
-    count.value = countInt;
-});
-
-checkoutBtn.addEventListener("click", () => {
-    location.href = "index.html";
-})
