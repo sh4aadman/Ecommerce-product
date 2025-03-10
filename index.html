@@ -49,15 +49,9 @@
     <section id="cart-content">
       <h2>Cart</h2>
       <hr>
+      <p id="empty-cart">Your cart is empty.</p>
       <section class="cart-details">
-        <figure>
-          <img src="./images/image-product-1-thumbnail.jpg" alt="product-thumbnail">
-        </figure>
-        <section class="cart-product-details">
-          <p>Fall Limited Edition Sneakers</p>
-          <p>1 x $125.00</p><span>$375.00</span>
-        </section>
-        <button class="remove-button"><i class="fa-solid fa-trash-can"></i></i></button>
+        
       </section>
       <button class="primary-button" id="check-out" type="submit">Checkout</button>
     </section>
@@ -80,7 +74,7 @@
 
     <section class="product-detail">
       <h5>Sneaker Company</h5>
-      <h1>Fall Limited Edition <br> Sneakers</h1>
+      <h1 id="product-name">Fall Limited Edition Sneakers</h1>
       <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
         durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
 
@@ -99,7 +93,7 @@
             <input type="number" name="" id="product-quantity" min="1" value="1">
             <button id="increment-button">+</button>
           </section>
-          <button type="submit" id="add-to-cart-buton" class="primary-button"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+          <button type="submit" id="add-to-cart-button" class="primary-button"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
         </form>
       </section>
     </section>

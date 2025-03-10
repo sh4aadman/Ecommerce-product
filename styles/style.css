@@ -113,6 +113,11 @@ aside ul > li {
   margin: 1em;
 }
 
+#empty-cart {
+  margin-top: 1em;
+  color: hsl(219, 9%, 45%);
+}
+
 #cart-content h2 {
   color: hsl(220, 13%, 13%);
   font-size: 1em;
