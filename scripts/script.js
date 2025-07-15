@@ -1,31 +1,14 @@
-const cartBadge = document.querySelector("#product-cart");
+// const cartBadge = document.querySelector("#product-cart");
 
-const countBadge = document.querySelector("#count-badge");
+// const countBadge = document.querySelector("#count-badge");
 
-const cartModal = document.querySelector("#cart-modal");
+// const cartModal = document.querySelector("#cart-modal");
 
 const emptyCart = document.querySelector("#empty-cart");
 
-const cartDetails = document.querySelector(".cart-details");
-
-const productImage = document.querySelector("#main-image");
+// const cartDetails = document.querySelector(".cart-details");
 
 const productName = document.querySelector("#product-name");
-
-const productLightbox = document.querySelector(".light-box");
-
-const lightboxCloseBtn = document.querySelector(".close-button");
-
-const lightboxImage = document.querySelector("#lightbox-image");
-
-const productThumbnailMain = document.querySelectorAll(".product-thumbnail-m");
-
-const productThumbnailLightbox = document.querySelectorAll(
-  ".product-thumbnail-light"
-);
-
-const previousBtn = document.querySelector("#previous-thumbnail");
-const nextBtn = document.querySelector("#next-thumbnail");
 
 const cartSubmission = document.querySelector(".product-cart");
 
@@ -33,86 +16,37 @@ const productCount = document.querySelector("#product-quantity");
 
 const addToCartBtn = document.querySelector("#add-to-cart-button");
 
-const countIncrementBtn = document.querySelector("#increment-button");
+// const countIncrementBtn = document.querySelector("#increment-button");
 
-const countDecrementBtn = document.querySelector("#decrement-button");
+// const countDecrementBtn = document.querySelector("#decrement-button");
 
-const removeBtn = document.querySelector(".remove-button");
+// const removeBtn = document.querySelector(".remove-button");
 
-const checkoutBtn = document.querySelector("#check-out");
+// const checkoutBtn = document.querySelector("#check-out");
 
-productImage.addEventListener("click", function () {
-  productLightbox.style.display = "block";
-  lightboxImage.src = productImage.src;
-  lightboxImage.alt = productImage.alt;
-});
+// const changeQuantity = (x) => {
+//   productCount.value = x;
+// };
 
-const changeMainImage = (x) => {
-  x.addEventListener("click", function () {
-    productImage.setAttribute("src", `./images/image-${x.alt}.jpg`);
-    productImage.setAttribute("alt", `${x.alt}`);
-  });
-};
+// countDecrementBtn.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   let count = productCount.value;
+//   let countInt = parseInt(count);
+//   countInt--;
+//   if (countInt <= 0) {
+//     countInt = 0;
+//     countDecrementBtn.disabled = true;
+//   }
+//   productCount.value = countInt;
+// });
 
-lightboxCloseBtn.addEventListener("click", function () {
-  productLightbox.style.display = "none";
-});
-
-const changeLightboxImage = (x) => {
-  x.addEventListener("click", function () {
-    lightboxImage.setAttribute("src", `./images/image-${x.alt}.jpg`);
-    lightboxImage.setAttribute("alt", `${x.alt}`);
-  });
-};
-
-productThumbnailMain.forEach(changeMainImage);
-productThumbnailLightbox.forEach(changeLightboxImage);
-
-previousBtn.addEventListener("click", function () {
-  let imgNumber = lightboxImage.alt.slice(-1);
-  let imgInt = parseInt(imgNumber);
-  imgInt--;
-  if (imgInt <= 0) {
-    imgInt = 4;
-  }
-  lightboxImage.setAttribute("src", `./images/image-product-${imgInt}.jpg`);
-  lightboxImage.setAttribute("alt", `product-${imgInt}`);
-});
-
-nextBtn.addEventListener("click", function () {
-  let imgNumber = lightboxImage.alt.slice(-1);
-  let imgInt = parseInt(imgNumber);
-  imgInt++;
-  if (imgInt > 4) {
-    imgInt = 1;
-  }
-  lightboxImage.setAttribute("src", `./images/image-product-${imgInt}.jpg`);
-  lightboxImage.setAttribute("alt", `product-${imgInt}`);
-});
-
-const changeQuantity = (x) => {
-  productCount.value = x;
-};
-
-countDecrementBtn.addEventListener("click", function (event) {
-  event.preventDefault();
-  let count = productCount.value;
-  let countInt = parseInt(count);
-  countInt--;
-  if (countInt <= 0) {
-    countInt = 0;
-    countDecrementBtn.disabled = true;
-  }
-  productCount.value = countInt;
-});
-
-countIncrementBtn.addEventListener("click", function (event) {
-  event.preventDefault();
-  let count = productCount.value;
-  let countInt = parseInt(count);
-  countInt++;
-  productCount.value = countInt;
-});
+// countIncrementBtn.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   let count = productCount.value;
+//   let countInt = parseInt(count);
+//   countInt++;
+//   productCount.value = countInt;
+// });
 
 addToCartBtn.addEventListener("click", function () {
   Location.href = "index.html";
@@ -131,27 +65,28 @@ addToCartBtn.addEventListener("click", function () {
   `;
 });
 
-cartSubmission.addEventListener("submit", function (event) {
-  event.preventDefault();
-  let badgeInt = parseInt(countBadge.textContent);
-  badgeInt++;
-  countBadge.textContent = badgeInt;
-  if (badgeInt > 0) {
-    countBadge.style.display = "block";
-  }
-});
+// cartSubmission.addEventListener("submit", function (event) {
+//   event.preventDefault();
+  
+//   let badgeInt = parseInt(countBadge.textContent);
+//   badgeInt++;
+//   countBadge.textContent = badgeInt;
+//   if (badgeInt > 0) {
+//     countBadge.style.display = "block";
+//   }
+// });
 
-cartBadge.addEventListener("click", function (event) {
-  event.stopImmediatePropagation();
-  cartModal.style.display = "block";
-  const badgeInt = parseInt(countBadge.textContent);
-  if (badgeInt === 0) {
-    checkoutBtn.style.display = "none";
-  }
-  setTimeout(() => {
-    cartModal.style.display = "none";
-  }, 5000);
-});
+// cartBadge.addEventListener("click", function (event) {
+//   event.stopImmediatePropagation();
+//   cartModal.style.display = "block";
+//   const badgeInt = parseInt(countBadge.textContent);
+//   if (badgeInt === 0) {
+//     checkoutBtn.style.display = "none";
+//   }
+//   setTimeout(() => {
+//     cartModal.style.display = "none";
+//   }, 5000);
+// });
 
 if (removeBtn) {
   removeBtn.addEventListener("click", function () {

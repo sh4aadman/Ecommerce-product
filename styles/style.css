@@ -156,6 +156,10 @@ aside ul > li {
   color: hsl(219, 9%, 45%);
 }
 
+.cart-product-details p:first-of-type {
+  margin-bottom: 5px;
+}
+
 .cart-product-details p:last-of-type {
   display: inline-block;
 }
