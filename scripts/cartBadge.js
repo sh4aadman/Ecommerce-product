@@ -4,10 +4,13 @@ const cartModal = document.querySelector("#cart-modal");
 
 const checkoutBtn = document.querySelector("#check-out");
 
-const count = sessionStorage.getItem("count");
+let count = 0;
+const quantityArrayStr = sessionStorage.getItem("quantityArray");
+const quantityArray = JSON.parse(quantityArrayStr);
+count = quantityArray?.length;
 
 cartBadge.addEventListener("click", function () {
-  if (parseInt(count) === 0) {
+  if (count === 0) {
     checkoutBtn.style.display = "none";
   }
   cartModal.style.display = "block";

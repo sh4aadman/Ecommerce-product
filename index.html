@@ -51,7 +51,16 @@
       <hr>
       <p id="empty-cart">Your cart is empty.</p>
       <section id="cart-details">
-        
+        <section class="cart-details">
+          <figure>
+            <img src="./images/image-product-1-thumbnail.jpg" alt="product-thumbnail">
+          </figure>
+          <section class="cart-product-details">
+            <p>productName</p>
+            <p>quantityCount</p><span>total</span>
+          </section>
+          <button class="remove-button"><i class="fa-solid fa-trash-can"></i></button>
+        </section>
       </section>
       <button class="primary-button" id="check-out" type="submit">Checkout</button>
     </section>
@@ -93,7 +102,8 @@
             <input type="number" name="product-quantity" id="product-quantity" min="1" value="1">
             <button id="increment-button">+</button>
           </section>
-          <button type="submit" id="add-to-cart-button" class="primary-button"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+          <button type="submit" id="add-to-cart-button" class="primary-button"><i
+              class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
         </form>
       </section>
     </section>

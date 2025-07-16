@@ -128,6 +128,10 @@ aside ul > li {
   width: 100%;
 }
 
+#cart-details {
+  display: none;
+}
+
 .cart-details {
   margin: 1em 0;
   display: grid;
@@ -168,6 +172,10 @@ aside ul > li {
   margin-left: 0.7rem;
   color: hsl(220, 13%, 13%);
   font-weight: 700;
+}
+
+#check-out {
+  margin-top: 10px;
 }
 
 hr {

@@ -8,10 +8,10 @@ let quantityArray = [];
 cartSubmission.addEventListener("submit", function (event) {
   event.preventDefault();
   const quantity = document.getElementById("product-quantity").value;
-  quantityArray.push(quantity);
-  sessionStorage.setItem("quantityArray", JSON.stringify(quantityArray));
+  const quantityObj = { id: badgeCount, quantity: quantity };
+  quantityArray.push(quantityObj);
   badgeCount++;
-  sessionStorage.setItem("count", badgeCount);
+  sessionStorage.setItem("quantityArray", JSON.stringify(quantityArray));
   countBadge.innerHTML = badgeCount;
   countBadge.style.display = "inline";
 });
