@@ -10,11 +10,17 @@ const productCount = document.querySelector("#product-quantity");
 
 const emptyCart = document.querySelector("#empty-cart");
 
+const checkoutBtn = document.querySelector("#check-out");
+
 cartBadge.addEventListener("click", function () {
   const quantityArrayStr = sessionStorage.getItem("quantityArray");
-  const quantityArray = JSON.parse(quantityArrayStr);
-  const count = quantityArray?.length || 0;
-  if (count > 0) {
-    emptyCart.style.display = "none";
+  if (quantityArrayStr) {
+    const quantityArray = JSON.parse(quantityArrayStr);
+    const count = quantityArray?.length || 0;
+    if (count > 0) {
+      emptyCart.style.display = "none";
+      cartDetails.style.display = "block";
+      checkoutBtn.style.display = "block";
+    }
   }
 });

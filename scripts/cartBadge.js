@@ -6,8 +6,10 @@ const checkoutBtn = document.querySelector("#check-out");
 
 let count = 0;
 const quantityArrayStr = sessionStorage.getItem("quantityArray");
-const quantityArray = JSON.parse(quantityArrayStr);
-count = quantityArray?.length;
+if (quantityArrayStr) {
+  const quantityArray = JSON.parse(quantityArrayStr);
+  count = quantityArray.length;
+}
 
 cartBadge.addEventListener("click", function () {
   if (count === 0) {
@@ -16,5 +18,5 @@ cartBadge.addEventListener("click", function () {
   cartModal.style.display = "block";
   setTimeout(() => {
     cartModal.style.display = "none";
-  }, 5000);
+  }, 6000);
 });

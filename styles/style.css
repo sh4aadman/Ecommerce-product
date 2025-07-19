@@ -175,6 +175,7 @@ aside ul > li {
 }
 
 #check-out {
+  display: none;
   margin-top: 10px;
 }
 

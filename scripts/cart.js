@@ -12,6 +12,6 @@ cartSubmission.addEventListener("submit", function (event) {
   quantityArray.push(quantityObj);
   badgeCount++;
   sessionStorage.setItem("quantityArray", JSON.stringify(quantityArray));
-  countBadge.innerHTML = badgeCount;
+  countBadge.innerHTML = quantity;
   countBadge.style.display = "inline";
 });
