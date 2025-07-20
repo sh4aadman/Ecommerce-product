@@ -28,6 +28,10 @@ nav {
   height: 3.5em;
 }
 
+#side-menu {
+  display: none;
+}
+
 nav ul,
 aside ul {
   list-style: none;
@@ -446,6 +450,41 @@ input[type="number"]::-webkit-outer-spin-button {
   border: none;
 }
 
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 70vw;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 10px 10px 100px;
+  padding: 1em;
+}
+
+.mobile-menu-sidebar {
+  padding: 1em;
+}
+
+.mobile-icon {
+  font-size: 1.25em;
+}
+
+.mobile-menu-display {
+  font-size: 1.25em;
+  list-style: none;
+  margin-top: 3.5em;
+}
+
+.mobile-menu-display li {
+  margin-top: 1.25em;
+}
+
+.mobile-menu-display li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
 @media (max-width: 1440px) and (min-width: 1024px) {
   html {
     width: 80%;
@@ -507,7 +546,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 767px) {
   html {
     width: 100%;
     margin: 0;
@@ -523,12 +562,23 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 100%;
   }
 
+  nav figure {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  #side-menu {
+    display: block;
+  }
+
   nav > ul {
     display: none;
   }
 
   main {
     grid-template-columns: 1fr;
+    gap: .25em;
   }
 
   #cart-modal {
@@ -550,7 +600,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
     position: relative;
     width: 100%;
-    height: 30vh;
+    height: 35vh;
   }
 
   .close-button {
@@ -564,6 +614,10 @@ input[type="number"]::-webkit-outer-spin-button {
   .product-image-lightbox img {
     margin: 0;
     border-radius: 0;
+    display: flex;
+    height: 35vh;
+    object-fit: cover;
+    object-position: 70% 23%;
   }
 
   #previous-thumbnail {
